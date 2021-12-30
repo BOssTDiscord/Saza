@@ -231,6 +231,16 @@ if mobilesupported and not pcsupported then
     l.GlobalShadows = false
     l.FogEnd = 9e9
     l.Brightness = 0
+    game:GetService("Players").LocalPlayer.PlayerScripts.Scripts.GUIs["Coin Rewards HUD"].Disabled = true
+    local a = game:GetService("Workspace")["__DEBRIS"]
+    local b = a:Clone()
+    b.Parent = a.Parent
+    a:Destroy()
+    for _,v in pairs(b:GetChildren()) do
+     if v.Name == 'RewardBillboard' then
+         v:Destroy()
+     end
+ end			
     settings().Rendering.QualityLevel = "Level01"
     for i,v in pairs(g:GetDescendants()) do
         if v:IsA("Part") or v:IsA("Union") or v:IsA("MeshPart") then
@@ -244,7 +254,7 @@ if mobilesupported and not pcsupported then
     end
     wait(2)
     LoadingTXT.Text = "Mobile Maintance"
-    wait(1)
+    wait(2)
     SazaLoader:Destroy()
     wait(2)
 --loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSXSazaMobile.lua'))()
