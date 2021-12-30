@@ -260,6 +260,7 @@ elseif mobilesupported and pcsupported then
     LoadingTXT.Text = "Bruhhhh You Cannot Choose 2 Device"
     wait(2)
     LoadingTXT.Text = "Execute Again"
+    wait(3)
     SazaLoader:Destroy()
 end
 end)
