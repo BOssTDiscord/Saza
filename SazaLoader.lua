@@ -253,7 +253,7 @@ if mobilesupported and not pcsupported then
         end
     end
     wait(2)
-    LoadingTXT.Text = "Mobile Maintance"
+    LoadingTXT.Text = "Done !"
     wait(2)
     SazaLoader:Destroy()
     wait(2)
