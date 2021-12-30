@@ -257,7 +257,7 @@ if mobilesupported and not pcsupported then
     wait(2)
     SazaLoader:Destroy()
     wait(2)
---loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSXSazaMobile.lua'))()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSXSazaMobile.lua'))()
 elseif not mobilesupported and pcsupported then
     wait(2)
     LoadingTXT.Text = "Done !"
