@@ -201,23 +201,23 @@ LoadText.MouseButton1Click:Connect(function()
 	LoadingTXT.TextColor3 = Color3.fromRGB(180, 180, 180)
 	LoadingTXT.TextSize = 14.000
 	LoadingTXT.TextScaled = true
-    wait(3)
+    wait(1)
     LoadingTXT.Text = "Getting Data..."
-    wait(2)
+    wait(1)
     LoadingTXT.Text = "Hello " ..game.Players.LocalPlayer.DisplayName.. " From: ".. code
-	wait(2)
+	wait(1)
 	LoadingTXT.Text = "Game Support!"
-	wait(2)
+	wait(1)
 	if not game:GetService("UserInputService").TouchEnabled and not game:GetService("UserInputService").KeyboardEnabled == false then
 	LoadingTXT.Text = "Your Device is: PC"
 	else
 	    LoadingTXT.Text = "Your Device is: Mobile"
 	end
-    wait(3)
+    wait(1)
     if game.PlaceId == 6284583030 then 
 	    LoadingTXT.Text = "Pet Simulator X"
 end
-wait(2)
+wait(1)
 if mobilesupported and not pcsupported then
     local decalsyeeted = true
     local g = game
@@ -252,31 +252,25 @@ if mobilesupported and not pcsupported then
             v.Lifetime = NumberRange.new(0)
         end
     end
-    wait(2)
-    LoadingTXT.Text = "Done !"
-    wait(2)
-    SazaLoader:Destroy()
-    wait(2)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSXSazaMobile.lua'))()
-elseif not mobilesupported and pcsupported then
-    wait(2)
-    LoadingTXT.Text = "Done !"
+    wait(1)
+    LoadingTXT.Text = "Thank for using Saza Hub"
     wait(1)
     SazaLoader:Destroy()
-    wait(2)
+    wait(1)
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSXSazaMobile.lua'))()
+elseif not mobilesupported and pcsupported then
+    wait(1)
+    LoadingTXT.Text = "Thank for using Saza Hub"
+    wait(1)
+    SazaLoader:Destroy()
+    wait(1)
     loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSX.lua'))()
 elseif mobilesupported and pcsupported then
-    wait(2)
+    wait(1)
     LoadingTXT.Text = "Bruhhhh You Cannot Choose 2 Device"
-    wait(2)
+    wait(1)
     LoadingTXT.Text = "Execute Again"
-    wait(3)
+    wait(1)
     SazaLoader:Destroy()
 end
 end)
-
-
-
-
-
-
