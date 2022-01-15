@@ -216,9 +216,18 @@ LoadText.MouseButton1Click:Connect(function()
     wait(1)
     if game.PlaceId == 6284583030 then 
 	    LoadingTXT.Text = "Pet Simulator X"
+    elseif game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+        LoadingTXT.Text = "Blox Fruits"
+        
 end
+
 wait(1)
 if mobilesupported and not pcsupported then
+    if game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+        LoadingTXT.Text = "Not Release yet"
+        wait(1)
+        SazaLoader:Destroy()
+    end
     local decalsyeeted = true
     local g = game
     local w = g.Workspace
@@ -264,7 +273,12 @@ elseif not mobilesupported and pcsupported then
     wait(1)
     SazaLoader:Destroy()
     wait(1)
-    loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSX.lua'))()
+    if game.PlaceId == 6284583030 then
+        loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSX.lua'))()
+    elseif game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+        loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BloxFruits.lua')()
+    end
+
 elseif mobilesupported and pcsupported then
     wait(1)
     LoadingTXT.Text = "Bruhhhh You Cannot Choose 2 Device"
