@@ -216,15 +216,19 @@ LoadText.MouseButton1Click:Connect(function()
     wait(1)
     if game.PlaceId == 6284583030 then 
 	LoadingTXT.Text = "Pet Simulator X"
-    elseif game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
-        LoadingTXT.Text = "Blox Fruits"
     elseif game.PlaceId == 3102144307 then
-        LoadingTXT.Text = "Anime Clicker Simulator"
-end
+    LoadingTXT.Text = "Anime Clicker Simulator"
+    elseif game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+    LoadingTXT.Text = "Blox Fruits"
+   end
 
 wait(1)
 if mobilesupported and not pcsupported then
-    if game.PlaceId == 2753915549 or 4442272183 or 7449423635 or 3102144307 then
+    if game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+        LoadingTXT.Text = "Not Release yet"
+        wait(1)
+        SazaLoader:Destroy()
+    elseif game.PlaceId == 3102144307 then
         LoadingTXT.Text = "Not Release yet"
         wait(1)
         SazaLoader:Destroy()
@@ -276,10 +280,10 @@ elseif not mobilesupported and pcsupported then
     wait(1)
     if game.PlaceId == 6284583030 then
         loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSX.lua'))()
+    elseif game.PlaceId == 3102144307 then
+	    loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/AnimeClicker.lua')()
     elseif game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
         loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BloxFruits.lua')()
-    elseif game.PlaceId == 3102144307 then
-	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/AnimeClicker.lua')()
     end
 
 elseif mobilesupported and pcsupported then
@@ -291,5 +295,3 @@ elseif mobilesupported and pcsupported then
     SazaLoader:Destroy()
 end
 end)
-
-
