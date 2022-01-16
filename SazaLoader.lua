@@ -224,15 +224,6 @@ LoadText.MouseButton1Click:Connect(function()
 
 wait(1)
 if mobilesupported and not pcsupported then
-    if game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
-        LoadingTXT.Text = "Not Release yet"
-        wait(1)
-        SazaLoader:Destroy()
-    elseif game.PlaceId == 3102144307 then
-        LoadingTXT.Text = "Not Release yet"
-        wait(1)
-        SazaLoader:Destroy()
-    end
     local decalsyeeted = true
     local g = game
     local w = g.Workspace
@@ -265,6 +256,15 @@ if mobilesupported and not pcsupported then
         elseif v:IsA("ParticleEmitter") or v:IsA("Trail") then 
             v.Lifetime = NumberRange.new(0)
         end
+    end
+    if game.PlaceId == 2753915549 or 4442272183 or 7449423635 then
+        LoadingTXT.Text = "Not Release yet"
+        wait(1)
+        SazaLoader:Destroy()
+    elseif game.PlaceId == 3102144307 then
+        LoadingTXT.Text = "Not Release yet"
+        wait(1)
+        SazaLoader:Destroy()
     end
     wait(1)
     LoadingTXT.Text = "Thank for using Saza Hub"
