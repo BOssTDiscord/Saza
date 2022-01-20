@@ -222,10 +222,12 @@ LoadText.MouseButton1Click:Connect(function()
         LoadingTXT.Text = "Blox Fruits"
     elseif game.PlaceId == 537413528 then
 	LoadingTXT.Text = "Build a Boat For Treasure"
+    elseif game.PlaceId == 286090429 then
+        LoadingTXT.Text = "Arsenal"
    end
 
 wait(1)
-if mobilesupported and game.PlaceId == 3102144307 or game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 537413528 and not pcsupported then
+if mobilesupported and game.PlaceId == 3102144307 or game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 or game.PlaceId == 537413528 or game.PlaceId == 286090429 and not pcsupported then
         LoadingTXT.Text = "Not Release yet"
         wait(1)
         SazaLoader:Destroy()
@@ -286,7 +288,9 @@ elseif not mobilesupported and pcsupported then
         wait(2)
         game.Players.LocalPlayer:kick("Blox Fruits Script has Takedown / Maintenance")
     elseif game.PlaceId == 537413528 then
-	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BaBForTreasure.lua')()			
+	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BaBForTreasure.lua')()
+    elseif game.PlaceId == 286090429 then
+	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/Arsenal.lua')()
     end
 
 elseif mobilesupported and pcsupported then
