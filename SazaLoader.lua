@@ -282,7 +282,9 @@ elseif not mobilesupported and pcsupported then
     elseif game.PlaceId == 3102144307 then
 	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/AnimeClicker.lua')()
     elseif game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
-        loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BloxFruits.lua')()
+        LoadingTXT.Text = "Blox Fruit Script has Takedown / Maintenance"
+        wait(2)
+        game.Players.LocalPlayer:kick("Blox Fruits Script has Takedown / Maintenance")
     elseif game.PlaceId == 537413528 then
 	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BaBForTreasure.lua')()			
     end
