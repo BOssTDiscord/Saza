@@ -279,19 +279,31 @@ elseif not mobilesupported and pcsupported then
     wait(1)
     SazaLoader:Destroy()
     wait(1)
-    if game.PlaceId == 6284583030 then
-        loadstring(game:HttpGet('https://raw.githubusercontent.com/KuppaHX/Saza/main/PSX.lua'))()
-    elseif game.PlaceId == 3102144307 then
-	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/AnimeClicker.lua')()
-    elseif game.PlaceId == 2753915549 or game.PlaceId == 4442272183 or game.PlaceId == 7449423635 then
-        LoadingTXT.Text = "Blox Fruit Script has Takedown / Maintenance"
-        wait(2)
-        game.Players.LocalPlayer:kick("Blox Fruits Script has Takedown / Maintenance")
-    elseif game.PlaceId == 537413528 then
-	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/BaBForTreasure.lua')()
-    elseif game.PlaceId == 286090429 then
-	loadstring(game:HttpGet'https://raw.githubusercontent.com/KuppaHX/Saza/main/Arsenal.lua')()
-    end
+    local function Invite()
+        local req = syn.request or http_request or request or http.request or nil
+        if req ~= nil then
+          for port=6463, 6472, 1 do
+            local inv = "http://127.0.0.1:"..tostring(port).."/rpc?v=1"
+            local http = game:GetService("HttpService")
+            local t = {cmd = "INVITE_BROWSER", args = {["code"] = "jhnvcjge2h"}, nonce = string.lower(http:GenerateGUID(false))}
+            local post = http:JSONEncode(t)
+            req({Url = inv, Method = "POST", Body = post, Headers = {["Content-Type"] = "application/json", ["Origin"] = "https://discord.com"}})
+          end
+        end
+      end
+      
+      local discordinv = "https://discord.gg/jhnvcjge2h"
+      local d
+      local f = pcall(function()
+          d = game:HttpGet("https://github.com/KuppaHX/Saza/blob/main/"..game.PlaceId..".lua")
+      end)
+      if f == true then
+          loadstring(d)()
+      else
+        game.Players.LocalPlayer:Kick("Probably the wrong game/place | Join Discord for feature list :D link copied. "..discordinv)
+        Invite()
+        setclipboard(discordinv)
+      end
 
 elseif mobilesupported and pcsupported then
     wait(1)
