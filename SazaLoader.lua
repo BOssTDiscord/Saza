@@ -295,7 +295,7 @@ elseif not mobilesupported and pcsupported then
       local discordinv = "https://discord.gg/jhnvcjge2h"
       local d
       local f = pcall(function()
-          d = game:HttpGet("https://raw.githubusercontent.com/KuppaHX/Saza/main/SazaSupportedGame"..game.PlaceId..".lua")
+          d = game:HttpGet("https://raw.githubusercontent.com/KuppaHX/Saza/main/SazaSupportedGame/"..game.PlaceId..".lua")
       end)
       if f == true then
           loadstring(d)()
