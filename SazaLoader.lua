@@ -300,7 +300,7 @@ elseif not mobilesupported and pcsupported then
       if f == true then
           loadstring(d)()
       else
-        game.Players.LocalPlayer:Kick("Probably the wrong game/place | Join Discord for feature list :D link copied. "..discordinv)
+        game.Players.LocalPlayer:Kick("Probably the wrong game/place | Join Discord for feature list, link discord has copied. "..discordinv)
         Invite()
         setclipboard(discordinv)
       end
