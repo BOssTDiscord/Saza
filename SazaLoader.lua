@@ -224,6 +224,8 @@ LoadText.MouseButton1Click:Connect(function()
 	LoadingTXT.Text = "Build a Boat For Treasure"
     elseif game.PlaceId == 286090429 then
         LoadingTXT.Text = "Arsenal"
+    elseif game.PlaceId == 5303541547 then
+        LoadingTXT.Text = "Two Piece"
    end
 
 wait(1)
