@@ -25,7 +25,7 @@ SazaMain.Parent = SazaLoader
 SazaMain.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
 SazaMain.BorderColor3 = Color3.fromRGB(0, 255, 255)
 SazaMain.BorderSizePixel = 2
-SazaMain.Position = UDim2.new(0.345615327, 0, 0.329824567, 0)
+SazaMain.Position = UDim2.new(0.345665327, 0, 0.329874567, 0)
 SazaMain.Size = UDim2.new(0, 395, 0, 224)
 
 SazaText.Name = "SazaText"
